@@ -1,4 +1,4 @@
-"""update time"""
+"""synchronize time by NTP server"""
 
 import socket
 import struct
@@ -58,8 +58,8 @@ def main():
         utc_time_new = datetime.fromtimestamp(epoch_time, timezone.utc)
         utc_time_cur = datetime.now(timezone.utc)
         if utc_time_new.timestamp() == round(utc_time_cur.timestamp()):
-            print("Skip")
-            continue
+            print("Time synchronized already")
+            break
 
         # pylint:disable=c-extension-no-member
         win32api.SetSystemTime(

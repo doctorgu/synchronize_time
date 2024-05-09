@@ -14,4 +14,4 @@
 
   - Set Trigger as "On workstation unlock"
 
-  - Set Action as "Start a Program" with Program/Script="python.exe" and Argument="C:\source\synchronize_time\ntp_update_time.py"
+  - Set Action as "Start a Program" with Program/Script="C:\source\synchronize_time\synchronize_time.bat"
