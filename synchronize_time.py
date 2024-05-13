@@ -1,5 +1,6 @@
 """synchronize time by NTP server"""
 
+import math
 import socket
 import struct
 from datetime import datetime, timezone
@@ -57,7 +58,8 @@ def main():
         # UTC time is obtained using fromtimestamp() with timezone.utc flag
         utc_time_new = datetime.fromtimestamp(epoch_time, timezone.utc)
         utc_time_cur = datetime.now(timezone.utc)
-        if utc_time_new.timestamp() == round(utc_time_cur.timestamp()):
+        # make time little faster because computer time slower always
+        if utc_time_new.timestamp() == math.floor(utc_time_cur.timestamp()):
             print("Time synchronized already")
             break
 
