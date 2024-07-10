@@ -1,4 +1,4 @@
-# Scheduling
+# Synchronize time
 
 <https://gist.github.com/nihal111/23faa51c3f88a281b676dcbac77ce015?permalink_comment_id=2396063#gistcomment-2396063>
 
